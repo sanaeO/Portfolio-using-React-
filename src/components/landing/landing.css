@@ -1,0 +1,104 @@
+:root{
+    --main-color : #f3d036;
+}
+.landing{
+  display : flex;
+  height: 100vh;
+}
+.landing .left-wrapper{
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.landing .info{
+ flex-direction: column;
+ justify-content: space-between;
+  gap:20px;
+  padding-left:30px;
+}
+.landing .info h2{
+    font-size : 40px;
+}
+.landing .info .wrapper
+{
+   height : 50px;
+   overflow: hidden;
+}
+.landing .info .wrapper .wrapper-items{
+  list-style: none ;
+  padding: 0;
+  height:100%;
+  animation : move 10s infinite; 
+}
+@keyframes move {
+    25% {
+        transform : translateY(-50px)
+    }
+    50% {
+        transform : translateY(-100px)
+    }
+    75% {
+        transform : translateY(-150px)
+    }
+    100% {
+        transform : translateY(-200px) 
+    }
+}
+.landing .info .wrapper .wrapper-items .wrapper-item{
+    height: 50px; 
+    display: flex;
+    align-items: center; 
+    color : var(--main-color);
+    font-size : 23px;
+    font-weight: bold;
+}
+@media(max-width : 991px)
+{
+    .landing .info .wrapper .wrapper-items .wrapper-item{
+       font-size : 17px;
+    } 
+}
+.landing .info p{
+    display : block;
+    color : #777;
+    font-weight: lighter;
+    font-size : 15px;
+    max-width : 70%;
+}
+.landing .icon i{
+    position: absolute;
+    bottom: 10px;
+    font-size: 26px;
+    transform: translateX(-50%);
+    left: 50%;
+    color : var(--main-color)
+}
+.landing .image{
+    flex:1;
+    position: relative;
+}
+.landing .image .background {
+  background : var(--main-color);
+  clip-path: polygon(0 48%, 20% 0, 100% 0, 100% 100%, 16% 100%);
+  width : 100%;
+  height: 100%;
+  right: 0;
+  top:0;
+}
+.landing .image img{
+    clip-path: polygon(0 51%, 25% 16%, 100% 16%, 100% 88%, 23% 87%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width : 100%;
+    height:100%;
+    /* height: 400px; */
+}
+@media(max-width : 991px)
+{
+    .landing .image img {
+        max-width : 60%;
+    } 
+}
+

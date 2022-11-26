@@ -1,0 +1,132 @@
+
+:root{
+  --main-color : #f3d036;
+}
+
+/* Container  */
+.container{
+  padding-left : 15px;
+  padding-right : 15px;
+  margin-left : auto;
+  margin-right : auto;
+}
+/* Container  */
+.container{
+  padding-left : 15px;
+  padding-right : 15px;
+  margin-left : auto;
+  margin-right : auto;
+}
+/* Ghadi okayn9ss lwidth  */
+/* Small Devices  */
+@media(min-width: 768px)
+{
+  .container{
+      width : 750px;
+  }
+}
+/* Medium Devices  */
+@media(min-width : 992px)
+{
+  .container{
+   width : 970px
+  }
+}
+/* Large Screens */
+@media(min-width: 1200px)
+{
+  .container{
+ width : 1170px
+  }
+}
+
+/* About  */
+.about{
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+.about .container{
+    display: flex;
+    justify-content: space-between;
+    gap : 30px;
+    align-items: center;
+}
+@media(max-width : 991px)
+{
+  .about .container{
+    flex-direction: column;
+  }
+}
+.about .container .image{
+  flex:1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+@media(max-width : 991px)
+{
+  .about {
+    padding-bottom : 10px
+  }
+  .about .container .image{
+   order : 2;
+   margin-top: 50px;
+   width : 100%;
+  }
+  .about .container .bg-image{
+    display : none;
+  }
+  .about .container .image .img{
+    height: 300px;
+    width: 100%;
+  }
+  .about .container .image .img img{
+    /* height: 100% */
+    border-radius: 14px !important;
+  }
+}
+.about .container .image .bg-image{
+  position: absolute;
+  width : 60%;
+  height: 100%;
+  top:-50px;
+  left: 50px;
+  background: var(--main-color);
+  border-radius: 27px;
+  z-index: -1;
+}
+.about .container .image .img{
+  width: 60%;
+}
+.about .container .image .img img{
+  width : 100%;
+  height:100%;
+  border-radius: 25px ;
+}
+
+.about .container .info{
+  flex:1;
+}
+.about .container .info h2{
+ margin-bottom: 20px;
+ font-size: 35px;
+}
+.about .container .info p{
+  color : #777;
+  line-height: 1.8;
+  font-weight: lighter;
+  margin-bottom: 8px;
+}
+.about .container .info .award {
+  display : flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  margin-top: 20px;
+
+}
+.about .container .info img{
+  width :130px;
+  border-radius: 20px;
+}
